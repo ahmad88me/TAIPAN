@@ -65,9 +65,7 @@ clean-windows-characters:
 	bash scripts/cleanWindowsCharacters.sh
 
 requirements:
-	pip install numpy
-	pip install requests
-	pip install SPARQLWrapper
+	pip install -r requirements.txt
 
 requirements-server:
 	pip install flask

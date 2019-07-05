@@ -4,8 +4,6 @@ default:
 
 install: requirements
 	cp taipan/Config/ExternalUris.py-sample taipan/Config/ExternalUris.py
-	mkdir results
-	mkdir cache
 
 test:
 	python -m unittest discover -s ./taipan/Tests -p "*Test.py"

@@ -70,10 +70,10 @@ class CSVLoader(object):
         """Load file descriptor or string io CSV to numpy array."""
         if isinstance(str_or_file, str):
             str_or_file = io.StringIO(str_or_file)
-        elif isinstance(str_or_file, _io.TextIOWrapper):
+        elif isinstance(str_or_file, _io.TextIOWrapper) or isinstance(str_or_file, file) :
             pass
         else:
-            raise Exception("Pass a string or file descriptor to this method!")
+            raise Exception("Pass a string or file descriptor to this method! Instead got a type %s" % str(type(str_or_file)))
         csv_reader = reader(str_or_file, dialect=self.dialect_id)
         csv = []
         for line in csv_reader:

@@ -1,3 +1,8 @@
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 import re
 import os
 from SPARQLWrapper import SPARQLWrapper, JSON
